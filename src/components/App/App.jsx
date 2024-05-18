@@ -6,10 +6,13 @@ import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contactsOps.js";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../Loader/Loader.jsx";
+import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 
 export default function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.contacts.loading);
+  const isError = useSelector((state) => state.contacts.error);
+
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
@@ -19,6 +22,11 @@ export default function App() {
         <h1>Phonebook</h1>
         <ContactForm />
         {isLoading && <Loader />}
+        {isError && (
+          <ErrorMessage
+            message={"Failed to fetch reviews. Please try again later."}
+          />
+        )}
 
         <SearchBox />
 
