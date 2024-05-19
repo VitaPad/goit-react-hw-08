@@ -9,7 +9,7 @@ export default function SearchBox() {
   const dispatch = useDispatch();
   const filter = useSelector(selectNameFilter);
 
-  const handleSearch = (event) => {
+  const handleChange = (event) => {
     dispatch(changeFilter(event.target.value));
   };
 
@@ -19,7 +19,7 @@ export default function SearchBox() {
       <input
         className={css.search}
         value={filter}
-        onChange={handleSearch}
+        onChange={handleChange}
         type="text"
       />
     </div>
