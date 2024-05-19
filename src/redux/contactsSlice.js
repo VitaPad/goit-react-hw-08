@@ -18,9 +18,6 @@ const contactsSlice = createSlice({
     loading: false,
     error: null,
   },
-  filters: {
-    name: "",
-  },
   extraReducers: (builder) =>
     builder
       .addCase(fetchContacts.pending, (state) => {
@@ -63,36 +60,14 @@ const contactsSlice = createSlice({
       }),
 });
 
-/* const contactsSlice = createSlice({
-  name: 'contacts',
-  initialState: contactInitial,
-  reducers: {
-    addContact(state, action) {
-      state.items = [...state.items, action.payload];
-    },
-    deleteContact(state, action) {
-      const index = state.items.findIndex(item => item.id === action.payload);
-      if (index !== -1) {
-        state.items.splice(index, 1);
-      }
-    },
-  },
-}); */
 export const selectLoading = (state) => state.contacts.loading;
 export const selectError = (state) => state.contacts.error;
 export const selectContacts = (state) => state.contacts.items;
-/* export const selectVisibleContscts = (state) => {
-  const contacts = state.contacts.item;
-  const filter = state.filters.text;
-  return contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
-}; */
 
-export const selectVisibleContscts = createSelector(
+export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, filter) => {
-    console.log("selectVisibleContscts");
+    console.log("selectFilteredContacts");
     return contacts.filter((contact) =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
