@@ -2,7 +2,7 @@ import { PiPhoneFill } from "react-icons/pi";
 import { PiUserFill } from "react-icons/pi";
 import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContacts } from "../../redux/contactsOps";
+import { deleteContacts } from "../../redux/contacts/operations";
 /* import { deleteContact } from "../../redux/contactsSlice"; */
 
 export default function Contact({ contact }) {

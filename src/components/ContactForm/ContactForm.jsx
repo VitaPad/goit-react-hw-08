@@ -3,7 +3,7 @@ import css from "./ContactForm.module.css";
 /* import { nanoid } from "nanoid"; */
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
-import { addContacts } from "../../redux/contactsOps";
+import { addContacts } from "../../redux/contacts/operations";
 
 const UserSchema = Yup.object().shape({
   name: Yup.string()
