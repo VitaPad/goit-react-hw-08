@@ -16,25 +16,27 @@ export default function RegistrationForm() {
     action.resetForm();
   };
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      <Form className={css.form} autoComplete="off">
-        <div>
-          <label className={css.label}>Username</label>
-          <Field type="text" name="name" />
-        </div>
-        <div>
-          <label className={css.label}>Email</label>
-          <Field type="email" name="email" />
-        </div>
-        <div>
-          <label className={css.label}>Password</label>
-          <Field type="password" name="password" />
-        </div>
+    <div className={css.container}>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        <Form className={css.form} autoComplete="off">
+          <div>
+            <label className={css.label}>Username</label>
+            <Field type="text" name="name" className={css.input} />
+          </div>
+          <div>
+            <label className={css.label}>Email</label>
+            <Field type="email" name="email" className={css.input} />
+          </div>
+          <div>
+            <label className={css.label}>Password</label>
+            <Field type="password" name="password" className={css.input} />
+          </div>
 
-        <button className={css.button} type="submit">
-          Register
-        </button>
-      </Form>
-    </Formik>
+          <button className={css.button} type="submit">
+            Register
+          </button>
+        </Form>
+      </Formik>
+    </div>
   );
 }

@@ -3,24 +3,54 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 24px;
-  border: 2px solid grey;
+  border: 1px solid grey;
   border-radius: 4px;
-  max-width: 768px;
+  width: 324px;
   padding: 24px;
+  background-color: #f9f9f9;
+  color: #13141f;
+  box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, 0.5);
 }
 .button {
-  border: 2px solid grey;
-  margin-top: 8px;
-  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px 0px #d6fe7a;
+  background-color: #d6fe7a;
   cursor: pointer;
-  background-color: lightgray;
+  border: none;
 }
 
 .button:hover {
-  background-color: grey; /* Змінює колір при наведенні */
+  border: 1px solid #13141f;
+}
+.button:focus {
+  border: 1px solid #13141f;
 }
 
 .submit {
   margin-bottom: 12px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 8px;
+  font-size: 18px;
+  color: #13141f;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -29,27 +29,27 @@ export default function ContactForm() {
     action.resetForm();
   };
 
-  /*   const usernameId = nanoid();
-  const usernumberId = nanoid(); */
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={handleSubmit}
-      validationSchema={UserSchema}
-    >
-      <Form>
-        <div className={css.container}>
-          <label>Name</label>
-          <Field type="text" name="name"></Field>
-          <ErrorMessage name="name" component="div" className={css.error} />
-          <label>Number</label>
-          <Field type="tel" name="number"></Field>
-          <ErrorMessage name="number" component="div" className={css.error} />
-          <button className={css.button} type="submit">
-            Add contact
-          </button>
-        </div>
-      </Form>
-    </Formik>
+    <div className={css.box}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={UserSchema}
+      >
+        <Form>
+          <div className={css.container}>
+            <label className={css.label}>Name</label>
+            <Field type="text" name="name" className={css.input}></Field>
+            <ErrorMessage name="name" component="div" className={css.error} />
+            <label className={css.label}>Number</label>
+            <Field type="tel" name="number" className={css.input}></Field>
+            <ErrorMessage name="number" component="div" className={css.error} />
+            <button className={css.button} type="submit">
+              Add contact
+            </button>
+          </div>
+        </Form>
+      </Formik>
+    </div>
   );
 }

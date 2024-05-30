@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations";
 import { selectError } from "../../redux/contacts/slice";
 import { selectIsLoading } from "../../redux/contacts/selector";
+import css from "../ContactsPage/ContactPage.module.css";
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const ContactsPage = () => {
   }, [dispatch]);
   return (
     <div>
-      <h1>Your contacts</h1>
+      <h1 className={css.title}>Your contacts</h1>
       <ContactForm />
       <SearchBox />
       {isLoading && !error && <b>Request in progress...</b>}

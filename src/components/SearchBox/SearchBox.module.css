@@ -1,11 +1,31 @@
 .container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .search {
-  margin-top: 12px;
-  height: 24px;
+  margin: 12px;
+  height: 32px;
+  width: 264px;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.label {
+  color: #eaffac;
+  font-size: 18px;
+}
+.search:hover {
+  box-shadow: 0px 0px 10px 0px #d6fe7a;
+  border-color: #d6fe7a;
+}
+.search:focus {
+  box-shadow: 0px 0px 10px 0px #d6fe7a;
+  border-color: #d6fe7a;
 }

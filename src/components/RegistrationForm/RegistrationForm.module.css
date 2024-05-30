@@ -1,17 +1,21 @@
 .form {
-  max-width: 400px;
+  max-width: 324px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
 }
+.container {
+  margin-top: 48px;
+}
 
 .label {
   display: block;
   margin-bottom: 4px;
   margin-top: 8px;
-  font-size: 12px;
+  font-size: 18px;
+  color: #13141f;
 }
 
 .input {
@@ -27,9 +31,10 @@
   display: block;
   width: 100%;
   padding: 10px;
-  margin-top: 20px;
-  background-color: #007bff;
-  color: #fff;
+  box-shadow: 0px 0px 10px 0px #d6fe7a;
+  background-color: #d6fe7a;
+
+  color: #13141f;
   font-size: 16px;
   border: none;
   border-radius: 5px;
@@ -39,9 +44,14 @@
 }
 
 .button:hover {
-  background-color: #0056b3;
-  border: 1px solid #0056b3;
+  border: 1px solid #13141f;
 }
 .button:focus {
-  background-color: #0056b3;
+  border: 1px solid #13141f;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
