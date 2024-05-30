@@ -1,5 +1,4 @@
 .item {
-  display: flex;
   border: 2px solid grey;
   border-radius: 4px;
   width: 256px;
@@ -9,20 +8,24 @@
   background-color: #f9f9f9;
   color: #13141f;
   box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, 0.5);
+  position: relative;
+  margin-bottom: 86px;
 }
 .box {
   margin: 16px;
 }
 
 .button {
+  position: absolute;
+  top: 80px;
+  right: 0;
   display: block;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 10px;
-  padding-bottom: 10px;
   margin-left: 20px;
-  margin-top: 26px;
-  margin-bottom: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   box-shadow: 0px 0px 10px 0px #d6fe7a;
   background-color: #d6fe7a;
   cursor: pointer;
@@ -30,9 +33,9 @@
 }
 
 .button:hover {
-  border: 1px solid #13141f;
+  background-color: #d6fe7a;
 }
+
 .button:focus {
-  border: 1px solid #13141f;
-  background-color: #c2ec62;
+  background-color: #beea57;
 }
