@@ -1,0 +1,18 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 612px;
+  width: auto;
+  overflow: hidden; /* Щоб обрізати тінь */
+  background-image: radial-gradient(
+      rgba(172, 172, 172, 0.1) 5%,
+      /* Перший кольори з прозорістю 50% */ rgba(189, 189, 186, 0.1) 15%,
+      /* Другий кольори з прозорістю 50% */ #13141f 70%
+        /* Третій кольори з прозорістю 50% */
+    ),
+    url("../../assets/office-865091_1280.jpg");
+  background-size: cover;
+}
